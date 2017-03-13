@@ -1,0 +1,118 @@
+<div class="container">
+  <h2 class="text-center">{{title}}</h2>
+  <p class="text-center">Looking to hire? <a href="/new-employer">Sign up as a client</a></p>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-6 col-md-8 col-sm-8 text-center">
+      <div class="social">
+        <button class="btn btn-info" (click)="authService.login()">Log in with social network</button>
+      </div>
+      <div>OR</div>
+      <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="first-name"
+            placeholder="First Name"
+            required
+            minlength="3"
+            [(ngModel)]="newEmployee.firstName"
+            #firstName="ngModel">
+        </div>
+        <div *ngIf="firstName.errors && (firstName.dirty || firstName.touched)"
+             class="alert alert-danger">
+          <div [hidden]="!firstName.errors.required">
+            First name is required
+          </div>
+          <div [hidden]="!firstName.errors.minlength">
+            First name must be at least 3 characters long.
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="last-name"
+            placeholder="Last Name"
+            required
+            minlength="3"
+            [(ngModel)]="newEmployee.lastName"
+            #lastName="ngModel">
+        </div>
+        <div *ngIf="lastName.errors && (lastName.dirty || lastName.touched)"
+             class="alert alert-danger">
+          <div [hidden]="!lastName.errors.required">
+            Last name is required
+          </div>
+          <div [hidden]="!lastName.errors.minlength">
+            Last name must be at least 3 characters long.
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Email"
+            required
+            [(ngModel)]="newEmployee.contactInfo.email"
+            #email="ngModel">
+        </div>
+        <div *ngIf="email.errors && (email.dirty || email.touched)"
+             class="alert alert-danger">
+          <div [hidden]="!email.errors.required">
+            Email is required
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="log-in"
+            placeholder="Username"
+            required
+            minlength="3"
+            maxlength="8"
+            [(ngModel)]="newEmployee.authInfo.logIn"
+            #logIn="ngModel">
+        </div>
+        <div *ngIf="logIn.errors && (logIn.dirty || logIn.touched)"
+             class="alert alert-danger">
+          <div [hidden]="!logIn.errors.required">
+            Username is required
+          </div>
+          <div [hidden]="!logIn.errors.minlength">
+            Username must be at least 3 characters long.
+          </div>
+          <div [hidden]="!logIn.errors.maxlength">
+            Username cannot be more than 8 characters long.
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            name="pass"
+            placeholder="Password"
+            required
+            minlength="6"
+            [(ngModel)]="newEmployee.authInfo.pass"
+            #pass="ngModel">
+        </div>
+        <div *ngIf="pass.errors && (pass.dirty || pass.touched)"
+             class="alert alert-danger">
+          <div [hidden]="!pass.errors.required">
+            Password is required
+          </div>
+          <div [hidden]="!pass.errors.minlength">
+            Password must be at least 6 characters long.
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!employeeForm.form.valid">Join</button>
+      </form>
+    </div>
+  </div>
+</div>

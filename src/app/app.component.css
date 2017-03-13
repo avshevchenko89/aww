@@ -1,0 +1,108 @@
+nav {
+  height: 8vh;
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav p {
+  color: #fff;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav p a:hover {
+  font-weight: bold;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 20%;
+  width: auto;
+}
+
+main {
+  min-height: 72vh;
+  height: auto;
+}
+
+footer {
+  height: 20vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-logo a {
+  color: #fff;
+}
+
+.social-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-icons ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons ul li {
+  flex-direction: row;
+  margin-right: 8px;
+}
+
+.social-icons ul li a {
+  width: 36px;
+  height: 36px;
+  display: block;
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 33px;
+  opacity: 0.8;
+}
+
+.social-icons ul li a i {
+  color: #fff;
+}
+
+.social-icons ul li a:hover {
+  color: #fff
+}
+
+.social-icons ul li a.envelope:hover {
+  background-color: #CECB26;
+}
+
+.social-icons ul li a.facebook:hover {
+  background-color: #3b5999;
+}
+
+.social-icons ul li a.twitter:hover {
+  background-color: #2ac6f7;
+}
+
+.social-icons ul li a.linkedin:hover {
+  background-color: #036dc0;
+}
+
+.social-icons ul li a.tumblr:hover {
+  background-color: #ff6b00;
+}
+

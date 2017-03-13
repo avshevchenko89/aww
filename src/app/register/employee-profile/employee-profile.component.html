@@ -1,0 +1,331 @@
+<div class="container">
+  <h3 class="text-center">Start with your profile to get success</h3>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-6 col-md-8 col-sm-8">
+
+      <div class="card contact-info" *ngIf="step === 2">
+        <div class="card-header">
+          <h5 class="mb-0">
+            Contact Information
+          </h5>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon" id="mobile-phone"><i class="fa fa-mobile"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Mobile Phone"
+                  aria-describedby="mobile-phone">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon" id="skype"><i class="fa fa-skype"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Skype"
+                  aria-describedby="skype">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon" id="viber"><i class="fa fa-whatsapp"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Viber"
+                  aria-describedby="viber">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon" id="whatsapp"><i class="fa fa-whatsapp"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="WhatsApp"
+                  aria-describedby="whatsapp">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success" (click)="next()">Next</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card location" *ngIf="step === 3">
+        <div class="card-header">
+          <h5 class="mb-0">
+            Location
+          </h5>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Address">
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Address2">
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Country">
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Region">
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="City">
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Postal code">
+            </div>
+            <button type="submit" class="btn btn-success" (click)="next()">Next</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card social-info" *ngIf="step === 1">
+        <div class="card-header">
+          <h5 class="mb-0">
+            Social Information
+          </h5>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon" id="website"><i class="fa fa-info"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Personal Website"
+                  aria-describedby="website">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon" id="linkedIn"><i class="fa fa-linkedin"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="LinkedIn"
+                  aria-describedby="linkedIn">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon" id="facebook"><i class="fa fa-facebook"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Facebook"
+                  aria-describedby="facebook">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon" id="google"><i class="fa fa-google"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Google"
+                  aria-describedby="google">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon" id="vk"><i class="fa fa-vk"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="VK"
+                  aria-describedby="vk">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success" (click)="next()">Next</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card personal-info" *ngIf="step === 4">
+        <div class="card-header">
+          <h5 class="mb-0">
+            Personal Information
+          </h5>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="form-group">
+              <label for="photo">Profile Image</label>
+              <input
+                type="file"
+                class="form-control"
+                name="photo"
+                id="photo">
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Title">
+            </div>
+            <div class="form-group">
+              <textarea cols="30" rows="3" class="form-control" placeholder="Tell about yourself"></textarea>
+            </div>
+            <div class="form-group">
+              <select name="gender" id="gender" class="form-control">
+                <option value="" selected>Gender</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="birth">Date of Birth</label>
+              <input
+                type="date"
+                id="birth"
+                name="birth"
+                class="form-control">
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="citizen-country"
+                name="citizen-country"
+                class="form-control"
+              placeholder="Country of citizen">
+            </div>
+            <button type="submit" class="btn btn-success" (click)="next()">Next</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card skills" *ngIf="step === 5">
+        <div class="card-header">
+          <h5 class="mb-0">
+            Professional skills
+          </h5>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="form-group">
+              <label>Enter skill name...</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Skill name"
+                  aria-describedby="add">
+                <span class="input-group-addon" id="add"><i class="fa fa-plus"></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>.. and its level</label>
+              <p-slider [(ngModel)]="val" name="val" [min]="0" [max]="10" [step]="1" [animate]="true"></p-slider>
+            </div>
+            <button type="submit" class="btn btn-success" (click)="next()">Next</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card languages" *ngIf="step === 6">
+        <div class="card-header">
+          <h5 class="mb-0">
+            Languages
+          </h5>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="form-group">
+              <label>Language name...</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Language"
+                  aria-describedby="plus">
+                <span class="input-group-addon" id="plus"><i class="fa fa-plus"></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>.. and its level</label>
+              <p-slider [(ngModel)]="val" name="val" [min]="0" [max]="10" [step]="1" [animate]="true"></p-slider>
+            </div>
+            <button type="submit" class="btn btn-success" (click)="next()">Next</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card education-experience" *ngIf="step === 7">
+        <div class="card-header">
+          <h5 class="mb-0">
+            Education & Experience Information
+          </h5>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Education Type">
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="School Name">
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Years of Experience">
+            </div>
+            <div class="form-group">
+              <label>Resume</label>
+              <input
+                type="file"
+                class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Cover Letter</label>
+              <input
+                type="file"
+                class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success" (click)="next()">Next</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card finish" *ngIf="step === 8">
+        <div class="card-block">
+          <h5>Thank you for creating your profile</h5>
+          <button type="submit" class="btn btn-success" (click)="submit()">Finish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

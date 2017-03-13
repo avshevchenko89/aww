@@ -1,0 +1,46 @@
+<nav class="navbar navbar-inverse bg-primary">
+  <a class="navbar-brand" href="/"><strong>{{title}}</strong></a>
+  <p *ngIf="!authService.authenticated()">
+    Already have an account? <a (click)="authService.login()">Log In</a>
+  </p>
+  <p *ngIf="authService.authenticated()">
+    <a (click)="authService.logout()">Log Out</a>
+  </p>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer class="bg-primary">
+  <div class="container text-center">
+    <div class="footer-logo">
+      <a href="/">
+        <strong>{{title}}</strong>
+      </a>
+    </div>
+    <div class="social-icons">
+      <ul>
+        <li>
+          <a class="envelope" href="https://plus.google.com/u/0/111385989702508958627?hl=en">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </li>
+        <li>
+          <a class="twitter" href="https://twitter.com/bridginformtech">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a class="facebook" href="https://www.facebook.com/eugene.asmolianski">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a class="linkedin" href="https://www.linkedin.com/company/bridginform-technologies-llc">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
